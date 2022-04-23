@@ -1,0 +1,110 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://styles/panels/screen-background.tres" type="StyleBox" id=1]
+[ext_resource path="res://styles/panels/bottombar-panel.tres" type="StyleBox" id=2]
+[ext_resource path="res://styles/fonts/roboto/roboto-medium.tres" type="DynamicFont" id=3]
+[ext_resource path="res://scripts/main.gd" type="Script" id=4]
+[ext_resource path="res://icons/logo.png" type="Texture" id=5]
+[ext_resource path="res://icons/calculator.png" type="Texture" id=6]
+
+[sub_resource type="StyleBoxFlat" id=1]
+draw_center = false
+
+[node name="screen" type="PanelContainer"]
+margin_right = 1363.0
+margin_bottom = 763.0
+rect_min_size = Vector2( 1366, 768 )
+rect_clip_content = true
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_styles/panel = ExtResource( 1 )
+script = ExtResource( 4 )
+
+[node name="container" type="VBoxContainer" parent="."]
+margin_right = 1366.0
+margin_bottom = 768.0
+custom_constants/separation = 0
+
+[node name="content" type="PanelContainer" parent="container"]
+margin_right = 1366.0
+margin_bottom = 692.0
+rect_clip_content = true
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_styles/panel = SubResource( 1 )
+
+[node name="bottombar" type="MarginContainer" parent="container"]
+margin_top = 692.0
+margin_right = 1366.0
+margin_bottom = 768.0
+custom_constants/margin_right = 12
+custom_constants/margin_top = 12
+custom_constants/margin_left = 12
+custom_constants/margin_bottom = 12
+
+[node name="panel" type="PanelContainer" parent="container/bottombar"]
+margin_left = 12.0
+margin_top = 12.0
+margin_right = 1354.0
+margin_bottom = 64.0
+custom_styles/panel = ExtResource( 2 )
+
+[node name="container" type="HBoxContainer" parent="container/bottombar/panel"]
+margin_left = 10.0
+margin_top = 10.0
+margin_right = 1332.0
+margin_bottom = 42.0
+custom_constants/separation = 0
+
+[node name="systemMenu" type="TextureButton" parent="container/bottombar/panel/container" groups=["selectable"]]
+margin_right = 32.0
+margin_bottom = 32.0
+rect_min_size = Vector2( 32, 32 )
+focus_mode = 0
+mouse_default_cursor_shape = 2
+size_flags_horizontal = 2
+enabled_focus_mode = 0
+texture_normal = ExtResource( 5 )
+texture_pressed = ExtResource( 5 )
+texture_hover = ExtResource( 5 )
+texture_disabled = ExtResource( 5 )
+texture_focused = ExtResource( 5 )
+expand = true
+
+[node name="systemDock" type="HBoxContainer" parent="container/bottombar/panel/container"]
+margin_left = 644.0
+margin_right = 676.0
+margin_bottom = 32.0
+size_flags_horizontal = 6
+custom_constants/separation = 8
+
+[node name="calculator" type="TextureButton" parent="container/bottombar/panel/container/systemDock" groups=["selectable", "shortcut"]]
+margin_right = 32.0
+margin_bottom = 32.0
+rect_min_size = Vector2( 32, 32 )
+focus_mode = 0
+mouse_default_cursor_shape = 2
+enabled_focus_mode = 0
+texture_normal = ExtResource( 6 )
+texture_pressed = ExtResource( 6 )
+texture_hover = ExtResource( 6 )
+texture_disabled = ExtResource( 6 )
+texture_focused = ExtResource( 6 )
+expand = true
+
+[node name="systemTime" type="Button" parent="container/bottombar/panel/container" groups=["selectable"]]
+margin_left = 1274.0
+margin_right = 1322.0
+margin_bottom = 32.0
+focus_mode = 0
+mouse_default_cursor_shape = 2
+size_flags_horizontal = 10
+custom_colors/font_color_disabled = Color( 1, 1, 1, 1 )
+custom_colors/font_color_focus = Color( 1, 1, 1, 1 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_colors/font_color_hover = Color( 1, 1, 1, 1 )
+custom_colors/font_color_pressed = Color( 1, 1, 1, 1 )
+custom_fonts/font = ExtResource( 3 )
+enabled_focus_mode = 0
+text = "00:00"
+flat = true
