@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/amorphOS.icon.png-ebc0e02728132073afa6e529ab2bb81b.stex"
+path="res://.import/index.icon.png-b92c9a802ad4b78e247784454a6b506f.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://docs/amorphOS.icon.png"
-dest_files=[ "res://.import/amorphOS.icon.png-ebc0e02728132073afa6e529ab2bb81b.stex" ]
+source_file="res://docs/index.icon.png"
+dest_files=[ "res://.import/index.icon.png-b92c9a802ad4b78e247784454a6b506f.stex" ]
 
 [params]
 

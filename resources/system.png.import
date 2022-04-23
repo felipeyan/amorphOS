@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/amorphOS.apple-touch-icon.png-5e74feddf1866dcc5eef099022b2f8e6.stex"
+path="res://.import/system.png-800cb44c28e5df7becc9243694e32993.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://docs/amorphOS.apple-touch-icon.png"
-dest_files=[ "res://.import/amorphOS.apple-touch-icon.png-5e74feddf1866dcc5eef099022b2f8e6.stex" ]
+source_file="res://resources/system.png"
+dest_files=[ "res://.import/system.png-800cb44c28e5df7becc9243694e32993.stex" ]
 
 [params]
 
